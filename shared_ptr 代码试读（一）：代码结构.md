@@ -4,7 +4,7 @@
 
 std::shared_ptr的相关代码主要包含shared_ptr，\_\_shared_ptr，\_\_shared_ptr_access，\_\_shared_count还有\_Sp_counted_base这几个class。它们之间的关系见下图。
 
-<img src="C:\Users\chengh\Desktop\shared_ptr.PNG" style="zoom:30%;" />
+<img src="https://github.com/Walton1128/STL-soruce-code-read/blob/main/Figures/shared_ptr.PNG" style="zoom:30%;" />
 
 ## shared_ptr
 

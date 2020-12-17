@@ -99,7 +99,7 @@ template<typename _Tp, typename _Alloc, typename... _Args>
 
 首先shared_ptr大概包含以下数据单元：指向data field的element_type \*类型的指针，以及一个间接的包含了\_M_use_count，\_M_weak_count的\_\_shared_count（在某些情况下它可能还包含一个deletor对象和一个allocator对象，这一区域被称为control block，\__shared_count中包含一个指向这个control block的指针）。
 
-<img src="C:\Users\chengh\AppData\Roaming\Typora\typora-user-images\image-20201217145658450.png" alt="image-20201217145658450" style="zoom: 33%;" />
+<img src="https://github.com/Walton1128/STL-soruce-code-read/blob/main/Figures/shared_ptr_00.png" alt="image-20201217145658450" style="zoom: 30%;" />
 
 
 
@@ -137,7 +137,7 @@ std::shared_ptr<int> a(new int);
 
 std::make_shared的精妙之处就在于，它将std::shared_ptr构造中的两次内存分配降低到了一次。这会对提供程序性能和降低内存碎片都有帮助。
 
-<img src="C:\Users\chengh\AppData\Roaming\Typora\typora-user-images\image-20201217153423778.png" alt="image-20201217153423778" style="zoom: 40%;" />
+<img src="https://github.com/Walton1128/STL-soruce-code-read/blob/main/Figures/shared_ptr_01.png" alt="image-20201217153423778" style="zoom: 30%;" />
 
 其具体实现过程需要参考// call stack #0 中的代码和后文中_Sp_counted_ptr_inplace的相关代码。
 
